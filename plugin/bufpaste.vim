@@ -4,6 +4,9 @@ endi
 
 let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/bufpaste.py'
 
+imap <C-\> <C-R>=PasteImageBuffer()<C-M>
+nmap <C-\> "=PasteImageBuffer()<C-M>p
+
 " prompt user for input
 function! PasteImageBuffer()
 "paste the contents
@@ -13,9 +16,13 @@ function! PasteImageBuffer()
     let name = input('Enter image name: ')
     call inputrestore()
 
-    execute 'pyfile '. s:path
+    if name == ""
+        throw "Need a valid image name"
+    endi
 
-    put = '!['. name . '](' . image_name . ' \"'. name . '\")'
+    execute 'pyfile '. s:path
+    return  '!['. name . '](' . image_name . ' \"'. name . '\")'
+
 endfunc
 
 command! PIB call PasteImageBuffer()
