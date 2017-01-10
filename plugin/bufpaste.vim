@@ -21,7 +21,7 @@ function! PasteImageBuffer()
     endi
 
     execute 'pyfile '. s:path
-    return  '!['. name . '](' . image_name . ' \"'. name . '\")'
+    return  '!['. name . '](' . image_name . ' "'. name . '")'
 
 endfunc
 
