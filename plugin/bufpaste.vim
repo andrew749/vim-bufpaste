@@ -4,8 +4,7 @@ endi
 
 let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/bufpaste.py'
 
-imap <C-\> <C-R>=PasteImageBuffer()<C-M>
-nmap <C-\> "=PasteImageBuffer()<C-M>p
+imap <Leader>ip <C-R>=PasteImageBuffer()<C-M>
 
 " prompt user for input
 function! PasteImageBuffer()
@@ -22,7 +21,6 @@ function! PasteImageBuffer()
 
     execute 'pyfile '. s:path
     return  '!['. name . '](' . image_name . ' "'. name . '")'
-
 endfunc
 
 command! PIB call PasteImageBuffer()
