@@ -11,16 +11,9 @@ function! PasteImageBuffer()
 "paste the contents
     let image_name = ""
 
-    call inputsave()
-    let name = input('Enter image name: ')
-    call inputrestore()
-
-    if name == ""
-        throw "Need a valid image name"
-    endi
 
     execute 'pyfile '. s:path
-    return  '!['. name . '](' . image_name . ' "'. name . '")'
+    :put ='![](' . image_name . ')'
 endfunc
 
 command! PIB call PasteImageBuffer()
