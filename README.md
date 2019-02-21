@@ -7,7 +7,7 @@ NOTE: This only works for Mac and Windows due to a dependency on getting
 clipboard data.
 
 ## Install
-Put folder into vim's plugin directory, or add 'Plugin kozmers/vim-bufpaste' into .vimrc  
+Put folder into vim's plugin directory, or add 'Plugin kozmers/vim-bufpaste' into .vimrc if the Vundle plugin is installed.   
 Dependencies: Pillow (Python Imaging Library)
 
 ```
