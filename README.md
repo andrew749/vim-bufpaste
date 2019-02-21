@@ -9,8 +9,8 @@ clipboard data.
 ## Install
 Put folder into vim's plugin directory, or add 'Plugin kozmers/vim-bufpaste' into .vimrc if the Vundle plugin is installed.   
 Dependencies: 
-  1. Pillow (Python Imaging Library)
-  2. python3 supported by vim.
+  1. Pillow (Python Imaging Library)  
+  2. python3 supported by vim.  
     > :echo has('python3')
     > 1
     > :version
