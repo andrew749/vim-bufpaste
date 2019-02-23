@@ -22,5 +22,5 @@ pip install pillow
 
 ## Usage
 
-BufPaste provides a <leader>ip in vim's insert-mode that will prompt you for a filename for the
+BufPaste provides a ```<leader>ip``` in vim's insert-mode that will prompt you for a filename for the
 image to be created. Make sure you have an image in the buffer.
