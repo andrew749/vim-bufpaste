@@ -1,7 +1,7 @@
 # BufPaste
 A vim plugin based on python3.
 Simply copy an image from your clipboard and paste a markdown
-formatted string in a file. Images are placed in a folder called `.images/`
+formatted string in a file. Images are placed in a folder called `images/`
 
 NOTE: This only works for Mac and Windows due to a dependency on getting
 clipboard data.
