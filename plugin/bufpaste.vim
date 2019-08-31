@@ -1,4 +1,4 @@
-if !has('python')
+if !has('python3')
     finish
 endi
 
@@ -19,8 +19,9 @@ function! PasteImageBuffer()
         throw "Need a valid image name"
     endi
 
-    execute 'pyfile '. s:path
+    " execute 'pyfile '. s:path
+    execute 'py3file '. s:path
     return  '!['. name . '](' . image_name . ' "'. name . '")'
 endfunc
 
-command! PIB call PasteImageBuffer()
+"command! PIB call PasteImageBuffer()

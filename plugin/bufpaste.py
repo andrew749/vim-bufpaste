@@ -1,17 +1,19 @@
+import uuid
+import vim
+from PIL import ImageGrab, Image
+import os
+
+out_path = 'images'
+
+if not os.path.exists(out_path):
+        os.makedirs(out_path)
+
 try:
-    import uuid
-    import vim
-    from PIL import ImageGrab, Image
-    import os
-
-    if not os.path.exists('.images'):
-        os.makedirs('.images')
-
     im = ImageGrab.grabclipboard()
     id = uuid.uuid4()
-    image_name = '.images/{}.jpg'.format(id)
+    image_name = '{}.jpg'.format(id)
     if isinstance(im, Image.Image):
-        im.save(image_name)
+        im.save(os.path.join(out_path,image_name))
     vim.command("let image_name = '%s'" % image_name)
-except ImportError, e:
-    print e
+except e:
+    print (e)
